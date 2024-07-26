@@ -10,7 +10,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-md">
+    <header className="bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-md border-b-2 border-black">
       <div className="container mx-auto flex items-center justify-between py-4 px-6 md:px-12">
         <div className="flex items-center space-x-3 group">
           <CodeIcon fontSize="large" className="text-white animate-pulse group-hover:animate-spin-slow" />
