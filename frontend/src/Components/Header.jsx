@@ -36,13 +36,15 @@ const Header = () => {
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-20 animate-slide-down-fade">
               <Link
-                to="/code-playground"
+                 to="/code-playground"
+             
                 className="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition-transform duration-300 ease-in-out transform hover:scale-105"
               >
                 Code Playground
               </Link>
               <Link
-                to="/general-compiler"
+                 to="/general-compiler"
+            
                 className="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition-transform duration-300 ease-in-out transform hover:scale-105"
               >
                 General Compiler
