@@ -7,7 +7,7 @@ import "codemirror/mode/css/css";
 import { Controlled as ControlledEditor } from "react-codemirror2";
 
 const Editor = (props) => {
-  const { displayName, value, language, onChange } = props;
+  const { icon, value, language, onChange } = props;
 
   function handleChange(editor, data, value) {
     onChange(value);
@@ -15,8 +15,8 @@ const Editor = (props) => {
 
   return (
     <div className="editor-container flex flex-col flex-1 p-2 border rounded-lg bg-gray-800 shadow-lg">
-      <div className="editor-title bg-gray-900 text-white text-lg p-2 rounded-t-lg text-center">
-        {displayName}
+      <div className="editor-title bg-gray-900 text-white text-lg p-2 rounded-t-lg flex items-center justify-center">
+        {icon}
       </div>
       <ControlledEditor
         onBeforeChange={(editor, data, value) => handleChange(editor, data, value)}

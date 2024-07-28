@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../Components/Layout';
 import Editor from '../Components/Development/Editor';
+import HtmlIcon from '@mui/icons-material/Html';
+import CssIcon from '@mui/icons-material/Css';
+import JavascriptIcon from '@mui/icons-material/Javascript';
 
 const CodePlayground = () => {
   const [html, setHtml] = useState('');
@@ -28,19 +31,19 @@ const CodePlayground = () => {
         <div className="flex flex-1 p-4 space-x-4 bg-gray-900">
           <Editor
             language="xml"
-            displayName="HTML"
+            icon={<HtmlIcon className="animate-bounce text-red-500" />}
             value={html}
             onChange={setHtml}
           />
           <Editor
             language="css"
-            displayName="CSS"
+            icon={<CssIcon className="animate-spin text-blue-500" />}
             value={css}
             onChange={setCss}
           />
           <Editor
             language="javascript"
-            displayName="JavaScript"
+            icon={<JavascriptIcon className="animate-pulse text-yellow-500" />}
             value={js}
             onChange={setJs}
           />
