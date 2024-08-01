@@ -12,12 +12,12 @@ const Header = () => {
   return (
     <header className="bg-gradient-to-r from-gray-800 to-gray-900 text-white shadow-md border-b-2 border-black">
       <div className="container mx-auto flex items-center justify-between py-4 px-6 md:px-12">
-        <div className="flex items-center space-x-3 group">
+        <Link to="/" className="flex items-center space-x-3 group">
           <CodeIcon fontSize="large" className="text-white animate-pulse group-hover:animate-spin-slow" />
           <h1 className="text-3xl font-bold tracking-wide animate-fade-in-up group-hover:animate-bounce">
             Flexicode
           </h1>
-        </div>
+        </Link>
         <div className="relative">
           <button
             onClick={toggleDropdown}
@@ -36,15 +36,13 @@ const Header = () => {
           {dropdownOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg z-20 animate-slide-down-fade">
               <Link
-                 to="/code-playground"
-             
+                to="/code-playground"
                 className="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition-transform duration-300 ease-in-out transform hover:scale-105"
               >
                 Code Playground
               </Link>
               <Link
-                 to="/general-compiler"
-            
+                to="/general-compiler"
                 className="block px-4 py-2 text-gray-300 hover:bg-gray-600 hover:text-white transition-transform duration-300 ease-in-out transform hover:scale-105"
               >
                 General Compiler
