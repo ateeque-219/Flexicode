@@ -121,5 +121,5 @@ Thumbs.db
 Thumbs.db
 
 # lock files
-package-lock.json
+!package-lock.json
 yarn.lock
