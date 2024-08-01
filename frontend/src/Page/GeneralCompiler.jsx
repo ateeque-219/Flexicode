@@ -4,7 +4,7 @@ import Editor from '@monaco-editor/react';
 import Layout from '../Components/Layout';
 import { FiMenu } from 'react-icons/fi';
 import '../index.css';
-
+const apiHost = import.meta.env.VITE_API
 const GeneralCompiler = () => {
   const [code, setCode] = useState('');
   const [input, setInput] = useState('');
@@ -19,7 +19,7 @@ const GeneralCompiler = () => {
   const handleRun = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/compile', {
+      const response = await axios.post(`${apiHost}/api/v1/compile`, {
         code,
         language,
         input
