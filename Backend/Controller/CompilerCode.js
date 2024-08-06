@@ -33,8 +33,8 @@ async function compile(req,res)
        console.log(__dirname);
        const commands = {
         java:`javac Main.java  && java Main`,
-        cpp:`g++ ${path} -o outputCPP && outputCPP`,
-        c:`gcc ${path} -o outputC && outputC`,
+        cpp:`g++ ${path} -o outputCPP && ./outputCPP`,
+        c:`gcc ${path} -o outputC && ./outputC`,
         cs:`mcs ${path} && mono ${path.substring(0,path.length-3)}.exe`,
         python:`python ${path}`,
         javascript:`node ${path}`
